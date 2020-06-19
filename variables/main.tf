@@ -11,3 +11,8 @@ variable "sshport" {
 variable "enabled" {
   default = true
 }
+
+variable "whitelist" {
+  type    = list(string)
+  default = ["Value1", "Value2"]
+}
