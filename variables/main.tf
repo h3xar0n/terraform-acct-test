@@ -45,3 +45,9 @@ resource "aws_vpc" "myvpc" {
 output "vpcid" {
   value = aws_vpc.myvpc.id
 }
+
+variable "mytuple" {
+  type = tuple([string, number, string])
+  default = ["cat", 1, "dog"]
+}
+
