@@ -22,3 +22,14 @@ resource "aws_instance" "myec2db" {
     Name = "DB Server"
   }
 }
+
+data "aws_instance" "dbsearch" {
+  filter {
+    name   = "tag:Name"
+    values = ["DB Server"]
+  }
+}
+
+output "dbservers" {
+  value = data.aws_instance.dbsearch.availability_zone
+}
