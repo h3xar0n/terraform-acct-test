@@ -10,7 +10,7 @@ variable "ingress_rules" {
 
 variable "egress_rules" {
   type    = list(number)
-  default = []
+  default = [443, 8443]
 }
 
 resource "aws_instance" "myec2db" {
