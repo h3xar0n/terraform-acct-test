@@ -11,7 +11,7 @@ resource "aws_instance" "myec2" {
     Name = "Web Server"
   }
 
-  depends_on = ["aws_instance.myec2db"]
+  depends_on = [aws_instance.myec2db]
 }
 
 resource "aws_instance" "myec2db" {
