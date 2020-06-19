@@ -47,7 +47,14 @@ output "vpcid" {
 }
 
 variable "mytuple" {
-  type = tuple([string, number, string])
+  type    = tuple([string, number, string])
   default = ["cat", 1, "dog"]
 }
 
+variable "myobject" {
+  type = object({ name = string, port = list(number) })
+  default = {
+    name = "Aron"
+    port = [22, 25, 80]
+  }
+}
