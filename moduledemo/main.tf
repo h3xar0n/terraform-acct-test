@@ -18,5 +18,5 @@ module "dbserver" {
 }
 
 output "dbprivateip" {
-  value = "module.dbserver.privateip"
+  value = module.dbserver.privateip
 }
