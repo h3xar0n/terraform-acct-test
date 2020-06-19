@@ -14,8 +14,9 @@ variable "egress_rules" {
 }
 
 resource "aws_instance" "myec2db" {
-  ami           = "ami-01a6e31ac994bbc09"
-  instance_type = "t2.micro"
+  ami             = "ami-01a6e31ac994bbc09"
+  instance_type   = "t2.micro"
+  security_groups = [aws_security_group.web_traffic.name]
 
   tags = {
     Name = "Web Server"
