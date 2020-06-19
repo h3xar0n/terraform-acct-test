@@ -13,7 +13,7 @@ resource "aws_instance" "myec2" {
 }
 
 module "dbserver" {
-  source = "./db"
+  source = "./db/mysql"
   dbname = "mydbserver"
 }
 
