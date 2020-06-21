@@ -20,3 +20,9 @@ module "dbserver" {
 output "dbprivateip" {
   value = module.dbserver.privateip
 }
+
+terraform {
+  required_providers {
+    aws = "~> 2.67"
+  }
+}
