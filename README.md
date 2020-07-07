@@ -1,5 +1,5 @@
 # terraform-acct-test
 
-TF configurations to test IAM policies in new organization accounts.
+Configurations to test IAM policies and to learn more about how TF works.
 
 See [Terraform documentation](https://www.terraform.io/docs/) for more information.
